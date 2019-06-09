@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    command: npm run dev
+    env_file:
+      - .env
+    environment:
+      - "PORT_WEB==${PORT_WEB}"

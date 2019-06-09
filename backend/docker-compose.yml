@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: yarn server
+    environment:
+      - "PORT_WEB=8080"
+    expose:
+      - "${PORT_WEB}"
+    ports:
+      - "${PORT_WEB}:${PORT_WEB}"
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
