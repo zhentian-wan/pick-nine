@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "server": "node server/index.js",
-    "dev": "nodemon -e js -w server server/index.js"
+    "dev": "nodemon -e js,pug -w server server/index.js"
   },
   "dependencies": {
     "express": "^4.17.1",

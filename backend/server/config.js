@@ -1,3 +1,4 @@
 module.exports = {
-    portWeb: process.env.PORT_WEB
+  bundleSrc: process.env.BUNDLE_SRC,
+  portWeb: process.env.PORT_WEB
 }

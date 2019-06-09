@@ -1,0 +1,17 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="")
+    title simplyEvil
+  body
+    #app
+    script(src=bundleSrc)
+    script.
+      (function(root) {
+        var env = JSON.parse('!{JSON.stringify(env)}')
+        env.el = document.getElementById('app')
+        root.Pick9.start(env)
+      })(window)
