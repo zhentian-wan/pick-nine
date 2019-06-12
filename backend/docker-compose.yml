@@ -4,11 +4,18 @@ services:
     build: .
     command: yarn server
     environment:
-      - "PORT_WEB=8080"
+      - 'PORT_WEB=8080'
     expose:
-      - "${PORT_WEB}"
+      - '${PORT_WEB}'
     ports:
-      - "${PORT_WEB}:${PORT_WEB}"
+      - '${PORT_WEB}:${PORT_WEB}'
     volumes:
-      - ".:/app"
-      - "/app/node_modules"
+      - '.:/app'
+      - '/app/node_modules'
+    depends_on:
+      - db
+
+  db:
+    image: postgres:9.6.3
+    expose:
+      - '5432'

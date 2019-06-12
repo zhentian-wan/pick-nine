@@ -1,5 +1,6 @@
 const { bundleSrc, portWeb } = require('./config')
 const express = require('express')
+const knex = require('knex')
 
 const app = express()
 
