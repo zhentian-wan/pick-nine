@@ -1,8 +1,8 @@
 const { bundleSrc, portWeb } = require('./config')
 const express = require('express')
-const knex = require('knex')
-
 const app = express()
+
+const knex = require('./db/knex')
 
 app.set('view engine', 'pug')
 app.set('views', './server/views')
